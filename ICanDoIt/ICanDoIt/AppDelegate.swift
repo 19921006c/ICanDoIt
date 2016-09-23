@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //1.创建窗口
+        window = UIWindow(frame: kScreenBounds)
+        //2.设置窗口背景色
+        window?.backgroundColor = UIColor.white
+        //3.设置root view controller
+        window?.rootViewController = ViewController()
+        //4.显示窗口
+        window?.makeKeyAndVisible()
         return true
     }
 
