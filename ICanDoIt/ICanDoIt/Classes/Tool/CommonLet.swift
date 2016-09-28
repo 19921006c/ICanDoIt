@@ -10,3 +10,7 @@ import UIKit
 
 let kScreenBounds = UIScreen.main.bounds
 
+let kScreenWidth = kScreenBounds.size.width
+
+let kScreenHeight = kScreenBounds.size.height
+

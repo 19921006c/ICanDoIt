@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		421F29111D94FE5100885B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F29101D94FE5100885B9D /* AppDelegate.swift */; };
-		421F29131D94FE5100885B9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F29121D94FE5100885B9D /* ViewController.swift */; };
 		421F29181D94FE5100885B9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421F29171D94FE5100885B9D /* Assets.xcassets */; };
 		421F291B1D94FE5100885B9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421F29191D94FE5100885B9D /* LaunchScreen.storyboard */; };
 		421F29261D94FE5100885B9D /* ICanDoItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F29251D94FE5100885B9D /* ICanDoItTests.swift */; };
 		421F29311D94FE5100885B9D /* ICanDoItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F29301D94FE5100885B9D /* ICanDoItUITests.swift */; };
-		421F293F1D94FEC600885B9D /* CommonLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F293E1D94FEC600885B9D /* CommonLet.swift */; };
+		421F29541D95013900885B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F29411D95013900885B9D /* AppDelegate.swift */; };
+		421F29551D95013900885B9D /* CommonLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F29531D95013900885B9D /* CommonLet.swift */; };
+		421F295B1D9501C200885B9D /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F295A1D9501C200885B9D /* MainNavigationController.swift */; };
+		421F295D1D9528BC00885B9D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F295C1D9528BC00885B9D /* HomeViewController.swift */; };
+		421F29611D952EA700885B9D /* HomeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F29601D952EA700885B9D /* HomeCollectionViewFlowLayout.swift */; };
+		421F29631D952F6700885B9D /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F29621D952F6700885B9D /* HomeCollectionView.swift */; };
+		422B71171D9B5FB300A83B91 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 422B71161D9B5FB300A83B91 /* data.plist */; };
+		429268C11D98C8BC007181A4 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429268C01D98C8BC007181A4 /* HomeModel.swift */; };
+		42FB96691D98B27100DEF8F0 /* MyReaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FB96671D98B27100DEF8F0 /* MyReaderCollectionCell.swift */; };
+		42FB966A1D98B27100DEF8F0 /* MyReaderCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FB96681D98B27100DEF8F0 /* MyReaderCollectionCell.xib */; };
+		42FB966D1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FB966B1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.swift */; };
+		42FB966E1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FB966C1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.xib */; };
+		42FB96711D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FB966F1D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.swift */; };
+		42FB96721D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FB96701D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +46,6 @@
 
 /* Begin PBXFileReference section */
 		421F290D1D94FE5100885B9D /* ICanDoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICanDoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		421F29101D94FE5100885B9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		421F29121D94FE5100885B9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		421F29171D94FE5100885B9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		421F291A1D94FE5100885B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		421F291C1D94FE5100885B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +55,20 @@
 		421F292C1D94FE5100885B9D /* ICanDoItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICanDoItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		421F29301D94FE5100885B9D /* ICanDoItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICanDoItUITests.swift; sourceTree = "<group>"; };
 		421F29321D94FE5100885B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		421F293E1D94FEC600885B9D /* CommonLet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonLet.swift; sourceTree = "<group>"; };
+		421F29411D95013900885B9D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		421F29531D95013900885B9D /* CommonLet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonLet.swift; sourceTree = "<group>"; };
+		421F295A1D9501C200885B9D /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		421F295C1D9528BC00885B9D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		421F29601D952EA700885B9D /* HomeCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		421F29621D952F6700885B9D /* HomeCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
+		422B71161D9B5FB300A83B91 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		429268C01D98C8BC007181A4 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		42FB96671D98B27100DEF8F0 /* MyReaderCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReaderCollectionCell.swift; sourceTree = "<group>"; };
+		42FB96681D98B27100DEF8F0 /* MyReaderCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyReaderCollectionCell.xib; sourceTree = "<group>"; };
+		42FB966B1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReaderFooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		42FB966C1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyReaderFooterCollectionReusableView.xib; sourceTree = "<group>"; };
+		42FB966F1D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReaderHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		42FB96701D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyReaderHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +119,10 @@
 		421F290F1D94FE5100885B9D /* ICanDoIt */ = {
 			isa = PBXGroup;
 			children = (
-				421F29101D94FE5100885B9D /* AppDelegate.swift */,
-				421F29121D94FE5100885B9D /* ViewController.swift */,
+				421F29401D95013900885B9D /* Classes */,
 				421F29171D94FE5100885B9D /* Assets.xcassets */,
 				421F29191D94FE5100885B9D /* LaunchScreen.storyboard */,
 				421F291C1D94FE5100885B9D /* Info.plist */,
-				421F293E1D94FEC600885B9D /* CommonLet.swift */,
 			);
 			path = ICanDoIt;
 			sourceTree = "<group>";
@@ -123,6 +143,163 @@
 				421F29321D94FE5100885B9D /* Info.plist */,
 			);
 			path = ICanDoItUITests;
+			sourceTree = "<group>";
+		};
+		421F29401D95013900885B9D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				421F29411D95013900885B9D /* AppDelegate.swift */,
+				421F29421D95013900885B9D /* Home(首页) */,
+				421F29471D95013900885B9D /* Main */,
+				421F294C1D95013900885B9D /* Other */,
+				421F294D1D95013900885B9D /* Profile(我) */,
+				421F29521D95013900885B9D /* Tool */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		421F29421D95013900885B9D /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				421F29431D95013900885B9D /* Controller */,
+				421F29441D95013900885B9D /* Model */,
+				421F29451D95013900885B9D /* Tool */,
+				421F29461D95013900885B9D /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		421F29431D95013900885B9D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				421F295C1D9528BC00885B9D /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		421F29441D95013900885B9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				429268C01D98C8BC007181A4 /* HomeModel.swift */,
+				422B71161D9B5FB300A83B91 /* data.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		421F29451D95013900885B9D /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				421F29601D952EA700885B9D /* HomeCollectionViewFlowLayout.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		421F29461D95013900885B9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				421F29621D952F6700885B9D /* HomeCollectionView.swift */,
+				42FB96671D98B27100DEF8F0 /* MyReaderCollectionCell.swift */,
+				42FB96681D98B27100DEF8F0 /* MyReaderCollectionCell.xib */,
+				42FB966B1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.swift */,
+				42FB966C1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.xib */,
+				42FB966F1D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.swift */,
+				42FB96701D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		421F29471D95013900885B9D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				421F29481D95013900885B9D /* Controller */,
+				421F29491D95013900885B9D /* Model */,
+				421F294A1D95013900885B9D /* Tool */,
+				421F294B1D95013900885B9D /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		421F29481D95013900885B9D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				421F295A1D9501C200885B9D /* MainNavigationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		421F29491D95013900885B9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		421F294A1D95013900885B9D /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		421F294B1D95013900885B9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		421F294C1D95013900885B9D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		421F294D1D95013900885B9D /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				421F294E1D95013900885B9D /* Controller */,
+				421F294F1D95013900885B9D /* Model */,
+				421F29501D95013900885B9D /* Tool */,
+				421F29511D95013900885B9D /* View */,
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		421F294E1D95013900885B9D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		421F294F1D95013900885B9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		421F29501D95013900885B9D /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		421F29511D95013900885B9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		421F29521D95013900885B9D /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				421F29531D95013900885B9D /* CommonLet.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +409,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				422B71171D9B5FB300A83B91 /* data.plist in Resources */,
+				42FB966A1D98B27100DEF8F0 /* MyReaderCollectionCell.xib in Resources */,
 				421F291B1D94FE5100885B9D /* LaunchScreen.storyboard in Resources */,
 				421F29181D94FE5100885B9D /* Assets.xcassets in Resources */,
+				42FB966E1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.xib in Resources */,
+				42FB96721D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +439,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				421F29131D94FE5100885B9D /* ViewController.swift in Sources */,
-				421F29111D94FE5100885B9D /* AppDelegate.swift in Sources */,
-				421F293F1D94FEC600885B9D /* CommonLet.swift in Sources */,
+				42FB96711D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.swift in Sources */,
+				421F29551D95013900885B9D /* CommonLet.swift in Sources */,
+				42FB96691D98B27100DEF8F0 /* MyReaderCollectionCell.swift in Sources */,
+				421F295B1D9501C200885B9D /* MainNavigationController.swift in Sources */,
+				421F29541D95013900885B9D /* AppDelegate.swift in Sources */,
+				421F295D1D9528BC00885B9D /* HomeViewController.swift in Sources */,
+				421F29611D952EA700885B9D /* HomeCollectionViewFlowLayout.swift in Sources */,
+				421F29631D952F6700885B9D /* HomeCollectionView.swift in Sources */,
+				429268C11D98C8BC007181A4 /* HomeModel.swift in Sources */,
+				42FB966D1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +683,7 @@
 				421F29371D94FE5100885B9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		421F29381D94FE5100885B9D /* Build configuration list for PBXNativeTarget "ICanDoItTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +692,7 @@
 				421F293A1D94FE5100885B9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		421F293B1D94FE5100885B9D /* Build configuration list for PBXNativeTarget "ICanDoItUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +701,7 @@
 				421F293D1D94FE5100885B9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

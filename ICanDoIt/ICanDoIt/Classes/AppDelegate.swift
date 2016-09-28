@@ -7,9 +7,6 @@
 //
 
 import UIKit
-
-
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -22,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //2.设置窗口背景色
         window?.backgroundColor = UIColor.white
         //3.设置root view controller
-        window?.rootViewController = ViewController()
+        window?.rootViewController = MainNavigationController(rootViewController: HomeViewController())
         //4.显示窗口
         window?.makeKeyAndVisible()
         return true

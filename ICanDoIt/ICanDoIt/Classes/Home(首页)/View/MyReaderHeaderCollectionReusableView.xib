@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="MyReaderHeaderCollectionReusableView" customModule="ICanDoIt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWb-YH-hfd" userLabel="TopLineView">
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="lOa-E4-CKj"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_bg" translatesAutoresizingMaskIntoConstraints="NO" id="eqk-YW-atw">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="1kE-K3-k16"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uW-Cg-cmG" userLabel="BottomLineView">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="OIc-CN-mn5"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="em9-RT-u1W">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtB-Nw-rml">
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="wtB-Nw-rml" secondAttribute="trailing" constant="10" id="46F-lh-KAN"/>
+                        <constraint firstAttribute="bottom" secondItem="wtB-Nw-rml" secondAttribute="bottom" constant="10" id="FsP-hO-yBL"/>
+                        <constraint firstItem="wtB-Nw-rml" firstAttribute="top" secondItem="em9-RT-u1W" secondAttribute="top" constant="10" id="oZ9-MT-bYO"/>
+                        <constraint firstItem="wtB-Nw-rml" firstAttribute="leading" secondItem="em9-RT-u1W" secondAttribute="leading" constant="10" id="xad-JP-1pZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UWb-YH-hfd" secondAttribute="trailing" id="2XZ-Xk-xjU"/>
+                <constraint firstItem="2uW-Cg-cmG" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="41T-1k-R4B"/>
+                <constraint firstAttribute="trailing" secondItem="eqk-YW-atw" secondAttribute="trailing" id="8fG-TU-O7x"/>
+                <constraint firstItem="em9-RT-u1W" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Bxx-Dt-5Xl"/>
+                <constraint firstItem="eqk-YW-atw" firstAttribute="top" secondItem="UWb-YH-hfd" secondAttribute="bottom" id="Md8-Rb-mT2"/>
+                <constraint firstItem="UWb-YH-hfd" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="OlV-j7-JgH"/>
+                <constraint firstItem="2uW-Cg-cmG" firstAttribute="top" secondItem="eqk-YW-atw" secondAttribute="bottom" id="Oqz-YU-Fuw"/>
+                <constraint firstAttribute="trailing" secondItem="em9-RT-u1W" secondAttribute="trailing" id="XXh-cM-Oqi"/>
+                <constraint firstItem="eqk-YW-atw" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="goY-P1-Zyb"/>
+                <constraint firstAttribute="bottom" secondItem="em9-RT-u1W" secondAttribute="bottom" id="obj-ls-hdL"/>
+                <constraint firstItem="UWb-YH-hfd" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="rev-7i-NUc"/>
+                <constraint firstItem="em9-RT-u1W" firstAttribute="top" secondItem="2uW-Cg-cmG" secondAttribute="bottom" id="xC0-sc-IBW"/>
+                <constraint firstAttribute="trailing" secondItem="2uW-Cg-cmG" secondAttribute="trailing" id="ymO-Hv-47B"/>
+            </constraints>
+            <connections>
+                <outlet property="label" destination="wtB-Nw-rml" id="zwu-JG-4cf"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="home_bg" width="375" height="648"/>
+    </resources>
+</document>
