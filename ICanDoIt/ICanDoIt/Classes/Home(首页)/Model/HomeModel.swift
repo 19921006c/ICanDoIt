@@ -14,11 +14,13 @@ class HomeModel: NSObject, NSCoding {
     var title : String?
     var id : String?
     var isFinish : Bool?
+    var content : [String]?
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(title, forKey: "title")
         aCoder.encode(id, forKey: "id")
         aCoder.encode(isFinish!, forKey: "isFinish")
+        aCoder.encode(content, forKey: "content")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,6 +29,7 @@ class HomeModel: NSObject, NSCoding {
         title = aDecoder.decodeObject(forKey: "title") as? String
         id = aDecoder.decodeObject(forKey: "id") as! String?
         isFinish = aDecoder.decodeBool(forKey: "isFinish")
+        content = aDecoder.decodeObject(forKey: "content") as! [String]?
     }
     
     class func dataWithCache() -> [HomeModel]{
@@ -47,6 +50,7 @@ class HomeModel: NSObject, NSCoding {
                     model.id = "\(id)"
                     userDefault.set(id, forKey: KHomeId)
                     model.isFinish = false
+                    model.content = [String]()
                     tmpArray.append(model)
                 }
                 array = tmpArray

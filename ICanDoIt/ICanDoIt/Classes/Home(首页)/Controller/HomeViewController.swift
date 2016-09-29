@@ -14,6 +14,8 @@ private let MyReaderFooterCollectionReusableViewIdentifier = "MyReaderFooterColl
 
 let kPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
 let kHomePath = kPath + "HomeModelArray.data"
+let KNotificationForHomeRefresh = "KNotificationForHomeRefresh"
+let KNotificationForHomeRefreshWithDelete = "KNotificationForHomeRefreshWithDelete"
 class HomeViewController: UIViewController {
 
     var allArray = [HomeModel]()
@@ -29,12 +31,43 @@ class HomeViewController: UIViewController {
         setNavigationBar()
         //处理数据
         dataProcess()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshHome(notification:)), name: NSNotification.Name(rawValue: KNotificationForHomeRefreshWithDelete), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(saveData), name: NSNotification.Name(rawValue: KNotificationForHomeRefresh), object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    func refreshHome(notification : Notification) {
+        var index = 0
+        let model = notification.userInfo?["model"] as! HomeModel
+        for tmpModel in allArray {
+            if tmpModel.id == model.id {
+                break
+            }
+            index += 1
+        }
+        allArray.remove(at: index)
+        saveData()
+        //数据处理抽取方法
+        dataProcessDistill()
+        //
+        collectionView.reloadData()
+    }
+    
+    //数据处理
     private func dataProcess() {
         
         allArray = HomeModel.dataWithCache()
-        
+        //数据处理抽取方法
+        dataProcessDistill()
+    }
+    //数据处理抽取方法
+    private func dataProcessDistill() {
+        finishArray.removeAll()
+        unfinishArray.removeAll()
         for model in allArray {
             if model.isFinish! {//已完成
                 finishArray.append(model)
@@ -70,6 +103,21 @@ class HomeViewController: UIViewController {
     
     func longPressGestureRecognized(sender: UILongPressGestureRecognizer){
         
+        let state = sender.state
+        let location = sender.location(in: collectionView)
+        let indexPath = collectionView .indexPathForItem(at: location)
+        let model : HomeModel
+        if indexPath?.section == 0 {
+            model = unfinishArray[(indexPath?.row)!]
+        }else{
+            model = finishArray[(indexPath?.row)!]
+        }
+        if state == UIGestureRecognizerState.began {
+            let vc = HomeDetailedViewController()
+            vc.model = model
+            vc.allArray = allArray
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func setNavigationBar() {
@@ -88,6 +136,7 @@ class HomeViewController: UIViewController {
             model.title = content
             model.id = "\(UserDefaults.standard.integer(forKey: KHomeId) + 1)"
             model.isFinish = false
+            model.content = [String]()
             self.allArray.append(model)
             self.unfinishArray.append(model)
             self.collectionView.reloadData()

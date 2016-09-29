@@ -19,6 +19,9 @@
 		421F29631D952F6700885B9D /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421F29621D952F6700885B9D /* HomeCollectionView.swift */; };
 		422B71171D9B5FB300A83B91 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 422B71161D9B5FB300A83B91 /* data.plist */; };
 		429268C11D98C8BC007181A4 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429268C01D98C8BC007181A4 /* HomeModel.swift */; };
+		4296FA441D9BCB1D004A17E5 /* HomeDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296FA431D9BCB1D004A17E5 /* HomeDetailedViewController.swift */; };
+		4296FA471D9CA9FF004A17E5 /* HomeDetailedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296FA451D9CA9FF004A17E5 /* HomeDetailedCell.swift */; };
+		4296FA481D9CA9FF004A17E5 /* HomeDetailedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4296FA461D9CA9FF004A17E5 /* HomeDetailedCell.xib */; };
 		42FB96691D98B27100DEF8F0 /* MyReaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FB96671D98B27100DEF8F0 /* MyReaderCollectionCell.swift */; };
 		42FB966A1D98B27100DEF8F0 /* MyReaderCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42FB96681D98B27100DEF8F0 /* MyReaderCollectionCell.xib */; };
 		42FB966D1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FB966B1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.swift */; };
@@ -63,6 +66,9 @@
 		421F29621D952F6700885B9D /* HomeCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
 		422B71161D9B5FB300A83B91 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		429268C01D98C8BC007181A4 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		4296FA431D9BCB1D004A17E5 /* HomeDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailedViewController.swift; sourceTree = "<group>"; };
+		4296FA451D9CA9FF004A17E5 /* HomeDetailedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailedCell.swift; sourceTree = "<group>"; };
+		4296FA461D9CA9FF004A17E5 /* HomeDetailedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailedCell.xib; sourceTree = "<group>"; };
 		42FB96671D98B27100DEF8F0 /* MyReaderCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReaderCollectionCell.swift; sourceTree = "<group>"; };
 		42FB96681D98B27100DEF8F0 /* MyReaderCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyReaderCollectionCell.xib; sourceTree = "<group>"; };
 		42FB966B1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReaderFooterCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -172,6 +178,7 @@
 		421F29431D95013900885B9D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4296FA3E1D9BCAFF004A17E5 /* HomeDetailed */,
 				421F295C1D9528BC00885B9D /* HomeViewController.swift */,
 			);
 			path = Controller;
@@ -302,6 +309,48 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		4296FA3E1D9BCAFF004A17E5 /* HomeDetailed */ = {
+			isa = PBXGroup;
+			children = (
+				4296FA3F1D9BCAFF004A17E5 /* Controller */,
+				4296FA401D9BCAFF004A17E5 /* Model */,
+				4296FA411D9BCAFF004A17E5 /* Tool */,
+				4296FA421D9BCAFF004A17E5 /* View */,
+			);
+			path = HomeDetailed;
+			sourceTree = "<group>";
+		};
+		4296FA3F1D9BCAFF004A17E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4296FA431D9BCB1D004A17E5 /* HomeDetailedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4296FA401D9BCAFF004A17E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4296FA411D9BCAFF004A17E5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		4296FA421D9BCAFF004A17E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4296FA451D9CA9FF004A17E5 /* HomeDetailedCell.swift */,
+				4296FA461D9CA9FF004A17E5 /* HomeDetailedCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,6 +458,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4296FA481D9CA9FF004A17E5 /* HomeDetailedCell.xib in Resources */,
 				422B71171D9B5FB300A83B91 /* data.plist in Resources */,
 				42FB966A1D98B27100DEF8F0 /* MyReaderCollectionCell.xib in Resources */,
 				421F291B1D94FE5100885B9D /* LaunchScreen.storyboard in Resources */,
@@ -441,11 +491,13 @@
 			files = (
 				42FB96711D98B59F00DEF8F0 /* MyReaderHeaderCollectionReusableView.swift in Sources */,
 				421F29551D95013900885B9D /* CommonLet.swift in Sources */,
+				4296FA471D9CA9FF004A17E5 /* HomeDetailedCell.swift in Sources */,
 				42FB96691D98B27100DEF8F0 /* MyReaderCollectionCell.swift in Sources */,
 				421F295B1D9501C200885B9D /* MainNavigationController.swift in Sources */,
 				421F29541D95013900885B9D /* AppDelegate.swift in Sources */,
 				421F295D1D9528BC00885B9D /* HomeViewController.swift in Sources */,
 				421F29611D952EA700885B9D /* HomeCollectionViewFlowLayout.swift in Sources */,
+				4296FA441D9BCB1D004A17E5 /* HomeDetailedViewController.swift in Sources */,
 				421F29631D952F6700885B9D /* HomeCollectionView.swift in Sources */,
 				429268C11D98C8BC007181A4 /* HomeModel.swift in Sources */,
 				42FB966D1D98B35400DEF8F0 /* MyReaderFooterCollectionReusableView.swift in Sources */,
