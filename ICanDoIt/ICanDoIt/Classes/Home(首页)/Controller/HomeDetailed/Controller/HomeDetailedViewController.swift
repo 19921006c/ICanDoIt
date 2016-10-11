@@ -25,7 +25,7 @@ class HomeDetailedViewController: UIViewController {
     }
     
     func setView() {
-        view.backgroundColor = UIColor.gray
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "home_bg")!)
         view.addSubview(addBtn)
     }
     
@@ -33,7 +33,7 @@ class HomeDetailedViewController: UIViewController {
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
-        tableView.backgroundColor = UIColor.gray
+        tableView.backgroundColor = UIColor(patternImage: UIImage(named: "home_bg")!)
     }
     
     func setNavigationBar() {

@@ -8,18 +8,25 @@
 
 import UIKit
 
+//复用cell identifier
 private let MyReaderCollectionCellIdentifier = "MyReaderCollectionCell"
 private let MyReaderHeaderCollectionReusableViewIdentifier = "MyReaderHeaderCollectionReusableView"
 private let MyReaderFooterCollectionReusableViewIdentifier = "MyReaderFooterCollectionReusableView"
 
+//获取缓存目录
 let kPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+//plist 文件路径
 let kHomePath = kPath + "HomeModelArray.data"
+//首页刷新通知
 let KNotificationForHomeRefresh = "KNotificationForHomeRefresh"
+//删除数据通知
 let KNotificationForHomeRefreshWithDelete = "KNotificationForHomeRefreshWithDelete"
 class HomeViewController: UIViewController {
-
+    //所有的数据模型
     var allArray = [HomeModel]()
+    //完成的数据模型
     var finishArray = [HomeModel]()
+    //未完成的数据模型
     var unfinishArray = [HomeModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +38,16 @@ class HomeViewController: UIViewController {
         setNavigationBar()
         //处理数据
         dataProcess()
-        
+        //接受通知
+        notificationAddObserver()
+    }
+    
+    //接受通知抽取方法
+    func notificationAddObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(refreshHome(notification:)), name: NSNotification.Name(rawValue: KNotificationForHomeRefreshWithDelete), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(saveData), name: NSNotification.Name(rawValue: KNotificationForHomeRefresh), object: nil)
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
+    //刷新首页数据
     func refreshHome(notification : Notification) {
         var index = 0
         let model = notification.userInfo?["model"] as! HomeModel
@@ -76,17 +84,20 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    //设置collection view
     private func setCollectionView() {
+        //添加collection view
         view.addSubview(collectionView)
-        
+        //设置数据源代理
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        //注册cell
         collectionView.register(UINib(nibName: MyReaderCollectionCellIdentifier, bundle: nil), forCellWithReuseIdentifier: MyReaderCollectionCellIdentifier)
         collectionView.register(UINib(nibName: MyReaderHeaderCollectionReusableViewIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyReaderHeaderCollectionReusableViewIdentifier)
         collectionView.register(UINib(nibName: MyReaderFooterCollectionReusableViewIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: MyReaderFooterCollectionReusableViewIdentifier)
-        
+        //创建长按手势
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPressGestureRecognized(sender:)))
+        //添加长按手势
         collectionView.addGestureRecognizer(longPress)
     }
     
@@ -96,7 +107,7 @@ class HomeViewController: UIViewController {
         
         return collection
     }()
-    
+    //MARK : 存数据
     func saveData(){
         NSKeyedArchiver.archiveRootObject(allArray, toFile: kHomePath)
     }
@@ -168,8 +179,14 @@ class HomeViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
         
     }
+    
+    deinit {
+        //移除通知
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
+//collection view delegate & data source
 extension HomeViewController:  UICollectionViewDataSource, UICollectionViewDelegate{
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyReaderCollectionCellIdentifier, for: indexPath) as! MyReaderCollectionCell
