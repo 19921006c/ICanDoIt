@@ -22,6 +22,7 @@ class HomeDetailedViewController: UIViewController {
         setView()
         setNavigationBar()
         setTableView()
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "Constellation_bg")!)
     }
     
     func setView() {

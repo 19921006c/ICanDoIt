@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
         dataProcess()
         //接受通知
         notificationAddObserver()
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "Constellation_bg")!)
     }
     
     //接受通知抽取方法
