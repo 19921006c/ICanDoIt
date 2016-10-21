@@ -115,15 +115,20 @@ class HomeViewController: UIViewController {
     func longPressGestureRecognized(sender: UILongPressGestureRecognizer){
         
         let state = sender.state
-        let location = sender.location(in: collectionView)
-        let indexPath = collectionView .indexPathForItem(at: location)
-        let model : HomeModel
-        if indexPath?.section == 0 {
-            model = unfinishArray[(indexPath?.row)!]
-        }else{
-            model = finishArray[(indexPath?.row)!]
-        }
+        
         if state == UIGestureRecognizerState.began {
+            
+            let location = sender.location(in: collectionView)
+            let indexPath = collectionView .indexPathForItem(at: location)
+            let model : HomeModel
+            if indexPath?.section == 0 {
+                model = unfinishArray[(indexPath?.row)!]
+            }else if indexPath?.section == 1{
+                model = finishArray[(indexPath?.row)!]
+            }else{
+                return
+            }
+            
             let vc = HomeDetailedViewController()
             vc.model = model
             vc.allArray = allArray
