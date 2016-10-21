@@ -14,9 +14,9 @@ private let MyReaderHeaderCollectionReusableViewIdentifier = "MyReaderHeaderColl
 private let MyReaderFooterCollectionReusableViewIdentifier = "MyReaderFooterCollectionReusableView"
 
 //获取缓存目录
-let kPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+let kPath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] as NSString
 //plist 文件路径
-let kHomePath = kPath + "HomeModelArray.data"
+let kHomePath = kPath.appendingPathComponent("HomeModelArray.data")
 //首页刷新通知
 let KNotificationForHomeRefresh = "KNotificationForHomeRefresh"
 //删除数据通知
